@@ -12,6 +12,10 @@ const httpServer = createServer(app);
 
 let port = process.env.PORT || 3500;
 
+httpServer.cors = {
+    origin: "http://localhost:3500"
+}
+
 initIO(httpServer);
 
 httpServer.listen(port)
